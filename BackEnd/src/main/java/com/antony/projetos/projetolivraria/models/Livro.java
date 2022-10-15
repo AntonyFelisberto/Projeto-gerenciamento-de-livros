@@ -5,15 +5,25 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
+import java.io.Serializable;
+
+import static javax.persistence.GenerationType.IDENTITY;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Livro {
+@Entity
+public class Livro implements Serializable {
 
-    private Integer id;
+    @Id
+    @GeneratedValue(strategy = IDENTITY)
+    private Integer livroId;
     private String titulo;
     private String nomeAutor;
     private String texto;
 
+    @ManyToOne
+    @JoinColumn(name = "categoriaId")
     private Categoria categoria;
 }
