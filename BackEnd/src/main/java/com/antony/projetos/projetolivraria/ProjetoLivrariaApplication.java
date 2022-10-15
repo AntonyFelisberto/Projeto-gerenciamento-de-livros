@@ -26,11 +26,20 @@ public class ProjetoLivrariaApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         Category categoria = new Category("Informatica","Livros de TI");
-        Books livro = new Books(null,"Cleans","Robertos ARKAS","Lorem ipsumlom",categoria);
-        categoria.getBooks().addAll(Arrays.asList(livro));
+        Category categoriaDois = new Category("Medicina","Livros de Medicina");
+        Category categoriaTres = new Category("Portugues","Livros de Didatica");
 
+        Books livro = new Books(null,"Cleans","Robertos ARS","Lorem ipsumlom",categoria);
+        Books livroDois = new Books(null,"Clans","Robertos AS","Lorem ipsumlom",categoria);
+        Books livroTres = new Books(null,"Clean","Robertos KAS","Lorem ipsumlom",categoria);
+        Books livroQuatro = new Books(null,"Ceans","Robertos ARK","Lorem ipsumlom",categoriaDois);
+        Books livroCinco = new Books(null,"Clea","Robertos AKAS","Lorem ipsumlom",categoriaDois);
+        Books livroSeis = new Books(null,"leans","Robertos ARKA","Lorem ipsumlom",categoriaDois);
 
-        this.categoriaRepositoy.saveAll(Arrays.asList(categoria));
-        this.livroRepository.saveAll(Arrays.asList(livro));
+        categoria.getBooks().addAll(Arrays.asList(livro,livroDois,livroTres));
+        categoriaDois.getBooks().addAll(Arrays.asList(livroQuatro,livroCinco,livroSeis));
+
+        this.categoriaRepositoy.saveAll(Arrays.asList(categoria,categoriaDois,categoriaTres));
+        this.livroRepository.saveAll(Arrays.asList(livro,livroDois,livroTres,livroQuatro,livroCinco,livroSeis));
     }
 }
