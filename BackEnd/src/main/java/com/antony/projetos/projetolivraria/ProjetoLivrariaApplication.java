@@ -28,6 +28,8 @@ public class ProjetoLivrariaApplication implements CommandLineRunner {
         Category categoria = new Category("Informatica","Livros de TI");
         Books livro = new Books(null,"Cleans","Robertos ARKAS","Lorem ipsumlom",categoria);
         categoria.getBooks().addAll(Arrays.asList(livro));
+
+
         this.categoriaRepositoy.saveAll(Arrays.asList(categoria));
         this.livroRepository.saveAll(Arrays.asList(livro));
     }
