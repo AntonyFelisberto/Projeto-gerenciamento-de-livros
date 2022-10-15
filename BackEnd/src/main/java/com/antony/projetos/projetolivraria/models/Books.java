@@ -14,16 +14,17 @@ import static javax.persistence.GenerationType.IDENTITY;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Livro implements Serializable {
+public class Books implements Serializable {
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
     private Integer livroId;
-    private String titulo;
-    private String nomeAutor;
-    private String texto;
+    private String title;
+    private String authorName;
+    private String text;
 
     @ManyToOne
-    @JoinColumn(name = "categoriaId")
-    private Categoria categoria;
+    @JoinColumn(name = "categoryId")
+    private Category category;
+
 }

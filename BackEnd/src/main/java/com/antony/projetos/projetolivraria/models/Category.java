@@ -15,14 +15,21 @@ import static javax.persistence.GenerationType.IDENTITY;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Categoria implements Serializable {
+public class Category implements Serializable {
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
     private Integer categoriaId;
-    private String nome;
-    private String descricao;
+    private String name;
+    private String description;
 
-    @OneToMany(mappedBy = "categoria")
-    private List<Livro> livros = new ArrayList<>();
+    @OneToMany(cascade=CascadeType.ALL)
+    private List<Books> books = new ArrayList<>();
+
+
+    public Category(String nome, String descricao) {
+        this.name = nome;
+        this.description = descricao;
+    }
+
 }
