@@ -2,25 +2,20 @@ package com.antony.projetos.projetolivraria.services;
 
 import com.antony.projetos.projetolivraria.models.Books;
 import com.antony.projetos.projetolivraria.models.Category;
-import com.antony.projetos.projetolivraria.repository.CategoriaRepositoy;
-import com.antony.projetos.projetolivraria.repository.LivroRepository;
+import com.antony.projetos.projetolivraria.repository.CategoryRepositoy;
+import com.antony.projetos.projetolivraria.repository.BookRepository;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
 import java.util.Arrays;
 
 @Service
 @AllArgsConstructor
 public class Services{
 
-    private CategoriaRepositoy categoriaRepositoy;
+    private CategoryRepositoy categoriaRepositoy;
 
-    private LivroRepository livroRepository;
+    private BookRepository livroRepository;
 
     public void instanciaBaseDeDados(){
         Category categoria = new Category("Informatica","Livros de TI");
