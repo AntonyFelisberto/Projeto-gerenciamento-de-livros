@@ -1,6 +1,7 @@
 package com.antony.projetos.projetolivraria.models;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,6 +19,8 @@ import static javax.persistence.GenerationType.IDENTITY;
 @Entity
 public class Books implements Serializable {
 
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = IDENTITY)
     private Integer livroId;
@@ -25,6 +28,7 @@ public class Books implements Serializable {
     private String authorName;
     private String text;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "categoryId")
     private Category category;

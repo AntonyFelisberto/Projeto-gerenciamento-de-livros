@@ -19,6 +19,8 @@ import static javax.persistence.GenerationType.IDENTITY;
 @Entity
 public class Category implements Serializable {
 
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = IDENTITY)
     private Integer categoriaId;
