@@ -4,7 +4,9 @@ import com.antony.projetos.projetolivraria.dtos.CategoryDTO;
 import com.antony.projetos.projetolivraria.exceptions.ObjectNotFound;
 import com.antony.projetos.projetolivraria.models.Category;
 import com.antony.projetos.projetolivraria.repository.CategoryRepositoy;
+import com.antony.projetos.projetolivraria.exceptions.DataIntegrityViolation;
 import lombok.AllArgsConstructor;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -38,4 +40,14 @@ public class CategoryService {
         category.setDescription(categoryDto.getDescription());
         return categoryRepositoy.save(category);
     }
+
+    public void delete(Integer categoryId){
+        try{
+            findById(categoryId);
+            categoryRepositoy.deleteById(categoryId);
+        }catch (DataIntegrityViolationException exception){
+            throw new DataIntegrityViolation("Categoria não pode ser deletada pois possui livros associados");
+        }
+    }
+
 }

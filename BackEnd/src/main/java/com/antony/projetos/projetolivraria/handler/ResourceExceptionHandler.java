@@ -1,5 +1,6 @@
 package com.antony.projetos.projetolivraria.handler;
 
+import com.antony.projetos.projetolivraria.exceptions.DataIntegrityViolation;
 import com.antony.projetos.projetolivraria.exceptions.ObjectNotFound;
 import com.antony.projetos.projetolivraria.models.StandardError;
 import org.springframework.http.HttpStatus;
@@ -20,4 +21,11 @@ public class ResourceExceptionHandler {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(error);
     }
 
+    @ExceptionHandler(DataIntegrityViolation.class)
+    public ResponseEntity<StandardError> dataIntegrityViolationException(DataIntegrityViolation exception, ServletRequest request) {
+        StandardError error = new StandardError(System.currentTimeMillis(),
+                HttpStatus.BAD_REQUEST.value(),
+                exception.getMessage());
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error);
+    }
 }
