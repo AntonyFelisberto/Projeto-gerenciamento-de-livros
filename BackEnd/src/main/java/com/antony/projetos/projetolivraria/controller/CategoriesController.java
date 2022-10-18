@@ -8,16 +8,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import java.net.MalformedURLException;
 import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URL;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @AllArgsConstructor
 @RestController
-@RequestMapping
+@RequestMapping("/categories")
 public class CategoriesController {
 
     private CategoryService categoryService;
@@ -38,7 +35,7 @@ public class CategoriesController {
     }
 
     @PostMapping
-    public ResponseEntity<Category> addCategory(@RequestBody Category category) throws MalformedURLException, URISyntaxException {
+    public ResponseEntity<Category> addCategory(@RequestBody Category category) {
         category = categoryService.save(category);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequestUri()
                                             .path("/{id}")

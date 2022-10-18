@@ -23,14 +23,14 @@ public class Books implements Serializable {
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
-    private Integer livroId;
+    private Integer bookId;
     private String title;
     private String authorName;
     private String text;
 
     @JsonIgnore
     @ManyToOne
-    @JoinColumn(name = "categoriId")
+    @JoinColumn(name = "categoryId")
     private Category category;
 
 }
