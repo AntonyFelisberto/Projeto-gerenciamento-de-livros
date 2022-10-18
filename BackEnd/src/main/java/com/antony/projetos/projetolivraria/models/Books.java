@@ -30,7 +30,7 @@ public class Books implements Serializable {
 
     @JsonIgnore
     @ManyToOne
-    @JoinColumn(name = "categoryId")
+    @JoinColumn(name = "categoriId")
     private Category category;
 
 }

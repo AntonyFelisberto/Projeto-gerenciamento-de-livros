@@ -23,7 +23,7 @@ public class Category implements Serializable {
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
-    private Integer categoriaId;
+    private Integer categoryId;
     private String name;
     private String description;
 
@@ -31,9 +31,9 @@ public class Category implements Serializable {
     private List<Books> books = new ArrayList<>();
 
 
-    public Category(String nome, String descricao) {
-        this.name = nome;
-        this.description = descricao;
+    public Category(String name, String description) {
+        this.name = name;
+        this.description = description;
     }
 
 }
