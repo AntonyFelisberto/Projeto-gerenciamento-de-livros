@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
 @AllArgsConstructor
-@RequestMapping("/books")
+@RestController
+@RequestMapping("/book")
 public class BooksController {
 
     private BookService bookService;
 
-    @GetMapping("/{id}")
+    @GetMapping("/{bookId}")
     public ResponseEntity<Books> findById(@PathVariable Integer bookId){
         Books book = bookService.findById(bookId);
         return ResponseEntity.ok().body(book);
