@@ -25,7 +25,7 @@ public class BookService {
 
     public List<Books> findAll(Integer categoryId){
         categoryService.findById(categoryId);
-        return bookRepository.findAllByCategory(categoryId);
+        return bookRepository.findByCategory(categoryId);
     }
 
 }

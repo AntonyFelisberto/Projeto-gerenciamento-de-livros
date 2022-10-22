@@ -10,6 +10,6 @@ import java.util.List;
 
 @Repository
 public interface BookRepository extends JpaRepository<Books,Integer> {
-    @Query("SELECT obj FROM Books WHERE obj.categoryId = :categoryId ORDER BY title")
-    List<Books> findAllByCategory(@Param(value =  "categoryId") Integer categoryId);
+
+    List<Books> findByCategory(Integer categoryId);
 }
