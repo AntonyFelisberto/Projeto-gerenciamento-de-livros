@@ -28,4 +28,17 @@ public class BookService {
         return bookRepository.findByCategory(categoryId);
     }
 
+    public Books update(Integer id, Books books) {
+        Books bookAtualizar  = findById(id);
+        Books bookAtualizado = updateBook(bookAtualizar,books);
+        return bookRepository.save(bookAtualizado);
+    }
+
+    private Books updateBook(Books bookAtualizar, Books books) {
+        bookAtualizar.setText(books.getText());
+        bookAtualizar.setAuthorName(books.getAuthorName());
+        bookAtualizar.setTitle(books.getTitle());
+        return bookAtualizar;
+    }
+
 }

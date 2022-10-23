@@ -23,6 +23,7 @@ public class BooksController {
         return ResponseEntity.ok().body(book);
     }
 
+    //TESTAR E FAZER BOOK WITH MAPPING findAll e update
     @GetMapping()
     public ResponseEntity<List<BookDTO>> findAll(@RequestParam(value = "category",defaultValue = "0")Integer id) {
         List<Books> list = bookService.findAll(id);
@@ -30,4 +31,15 @@ public class BooksController {
         return ResponseEntity.ok().body(bookDTO);
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<Books> update(@PathVariable Integer id,@RequestBody Books books){
+        Books book = bookService.update(id,books);
+        return ResponseEntity.ok().body(book);
+    }
+
+    @PatchMapping ("/{id}")
+    public ResponseEntity<Books> updatePatch(@PathVariable Integer id,@RequestBody Books books){
+        Books book = bookService.update(id,books);
+        return ResponseEntity.ok().body(book);
+    }
 }
