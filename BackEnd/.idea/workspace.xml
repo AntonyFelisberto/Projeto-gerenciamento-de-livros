@@ -86,6 +86,19 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="projetoLivraria" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="projetoLivraria" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProjetoLivrariaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="projetoLivraria" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.antony.projetos.projetolivraria.ProjetoLivrariaApplication" />
