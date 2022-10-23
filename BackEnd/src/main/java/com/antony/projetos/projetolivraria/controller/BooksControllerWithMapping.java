@@ -22,7 +22,7 @@ public class BooksControllerWithMapping {
 
     private BookService bookService;
 
-    @GetMapping("/{idRequisition}")
+    @GetMapping("/pegarPorId/{idRequisition}")
     public ResponseEntity<Books> findById(@PathVariable Integer idRequisition){
         Books book = bookService.findById(idRequisition);
         return ResponseEntity.ok().body(book);
