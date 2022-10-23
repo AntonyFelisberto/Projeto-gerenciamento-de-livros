@@ -47,6 +47,12 @@ public class BooksControllerWithMapping {
         return ResponseEntity.ok().body(book);
     }
 
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Integer id){
+        bookService.delete(id);
+        return ResponseEntity.noContent().build();
+    }
+
     @PostMapping("/adicionarSemCategoria")
     public ResponseEntity<Books> insertWithoutId(@RequestBody Books book) throws MalformedURLException, URISyntaxException {
         Books books = bookService.insert(book);

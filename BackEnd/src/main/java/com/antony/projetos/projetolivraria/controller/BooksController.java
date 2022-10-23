@@ -52,4 +52,10 @@ public class BooksController {
         return ResponseEntity.created(uri).build();
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Integer id){
+        bookService.delete(id);
+        return ResponseEntity.noContent().build();
+    }
+
 }
