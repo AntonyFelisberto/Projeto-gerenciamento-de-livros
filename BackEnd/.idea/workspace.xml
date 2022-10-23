@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4af9bc4b-db3d-4218-9eff-306c8b185b7e" name="Changes" comment="Ajustando back para deploy">
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-test.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="desenvolvimento" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2GBkZp7IqgKMdeVIn4rk8SdEmHf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lenovo/Documents/GitHub/Projeto-gerenciamento-de-livros/BackEnd/src/main/resources&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;0b589ef14641e0bec987f6f815289bf5&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\Documents\GitHub\Projeto-gerenciamento-de-livros\BackEnd\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.antony.projetos.projetolivraria.controller" />
+      <recent name="com.antony.projetos.projetolivraria.services" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ProjetoLivrariaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="projetoLivraria" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.antony.projetos.projetolivraria.ProjetoLivrariaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4af9bc4b-db3d-4218-9eff-306c8b185b7e" name="Changes" comment="" />
+      <created>1665869422805</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1665869422805</updated>
+      <workItem from="1665869424062" duration="6217000" />
+      <workItem from="1665875763112" duration="6884000" />
+      <workItem from="1665926986611" duration="779000" />
+      <workItem from="1665930900486" duration="189000" />
+      <workItem from="1665932769483" duration="565000" />
+      <workItem from="1665953320241" duration="5113000" />
+      <workItem from="1666044417636" duration="8685000" />
+      <workItem from="1666054458063" duration="429000" />
+      <workItem from="1666054909848" duration="3265000" />
+      <workItem from="1666133092358" duration="618000" />
+      <workItem from="1666305935748" duration="2901000" />
+      <workItem from="1666461351915" duration="3377000" />
+      <workItem from="1666489257851" duration="5909000" />
+      <workItem from="1666538095274" duration="376000" />
+      <workItem from="1666546004471" duration="2027000" />
+      <workItem from="1666548061245" duration="162000" />
+    </task>
+    <task id="LOCAL-00001" summary="Refatorando variaveis e classes&#10;Mudando o banco para usar mySql&#10;Colocando geração de dados manuais no banco">
+      <created>1665875622995</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1665875622995</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Adicionando modelo de erro personalizado">
+      <created>1665957979728</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1665957979728</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Adicionado o metodo de atualizar">
+      <created>1666051837055</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1666051837055</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Adicionado exceção personalizada de delete">
+      <created>1666052434536</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1666052434536</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Adicionado classe de livros">
+      <created>1666054151056</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1666054151056</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Adicionado método de delete &#10;Corrigindo erro do BooksController.java&#10;   Com erro - não achava a variavel &#10;    @GetMapping(&quot;/{id}&quot;)&#10;    public ResponseEntity&lt;Books&gt; findById(@PathVariable Integer bookId){&#10;        Books book = bookService.findById(bookId);&#10;        return ResponseEntity.ok().body(book);&#10;    }&#10;   Sem erro - mudando a variavel do PathVariable e do GetMapping para serem iguais&#10;     @GetMapping(&quot;/{bookId}&quot;)&#10;     public ResponseEntity&lt;Books&gt; findById(@PathVariable Integer bookId){&#10;         Books book = bookService.findById(bookId);&#10;         return ResponseEntity.ok().body(book);&#10;     }">
+      <created>1666056686691</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1666056686691</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Listando livros por categoria id">
+      <created>1666464431783</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1666464431783</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Criando metodo de atualização de dados">
+      <created>1666490572689</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1666490572689</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Criando metodo de inserção de dados e classe com mappings">
+      <created>1666492682967</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1666492682967</updated>
+    </task>
+    <task id="LOCAL-00010" summary="mudando nome do get">
+      <created>1666492760762</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1666492760762</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Criando metodo delete">
+      <created>1666493649624</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1666493649624</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Iniciando validação de campos">
+      <created>1666495162863</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1666495162863</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Finalizando o projeto do backEnd">
+      <created>1666547466507</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1666547466507</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Ajustando back para deploy">
+      <created>1666547996995</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1666547996995</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Refatorando variaveis e classes&#10;Mudando o banco para usar mySql&#10;Colocando geração de dados manuais no banco" />
+    <MESSAGE value="Adicionando modelo de erro personalizado" />
+    <MESSAGE value="Adicionado o metodo de atualizar" />
+    <MESSAGE value="Adicionado exceção personalizada de delete" />
+    <MESSAGE value="Adicionado classe de livros" />
+    <MESSAGE value="Adicionado método de delete &#10;Corrigindo erro do BooksController.java&#10;   Com erro - não achava a variavel &#10;    @GetMapping(&quot;/{id}&quot;)&#10;    public ResponseEntity&lt;Books&gt; findById(@PathVariable Integer bookId){&#10;        Books book = bookService.findById(bookId);&#10;        return ResponseEntity.ok().body(book);&#10;    }&#10;   Sem erro - mudando a variavel do PathVariable e do GetMapping para serem iguais&#10;     @GetMapping(&quot;/{bookId}&quot;)&#10;     public ResponseEntity&lt;Books&gt; findById(@PathVariable Integer bookId){&#10;         Books book = bookService.findById(bookId);&#10;         return ResponseEntity.ok().body(book);&#10;     }" />
+    <MESSAGE value="Listando livros por categoria id" />
+    <MESSAGE value="Criando metodo de atualização de dados" />
+    <MESSAGE value="Criando metodo de inserção de dados e classe com mappings" />
+    <MESSAGE value="mudando nome do get" />
+    <MESSAGE value="Criando metodo delete" />
+    <MESSAGE value="Iniciando validação de campos" />
+    <MESSAGE value="Finalizando o projeto do backEnd" />
+    <MESSAGE value="Ajustando back para deploy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajustando back para deploy" />
+  </component>
+</project>
