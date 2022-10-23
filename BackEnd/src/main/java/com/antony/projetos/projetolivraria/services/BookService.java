@@ -2,6 +2,7 @@ package com.antony.projetos.projetolivraria.services;
 
 import com.antony.projetos.projetolivraria.exceptions.ObjectNotFound;
 import com.antony.projetos.projetolivraria.models.Books;
+import com.antony.projetos.projetolivraria.models.Category;
 import com.antony.projetos.projetolivraria.repository.BookRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -39,6 +40,19 @@ public class BookService {
         bookAtualizar.setAuthorName(books.getAuthorName());
         bookAtualizar.setTitle(books.getTitle());
         return bookAtualizar;
+    }
+
+    public Books insert(Integer idCategory, Books book) {
+        book.setBookId(null);
+        Category category = categoryService.findById(idCategory);
+        book.setCategory(category);
+        return bookRepository.save(book);
+    }
+
+    public Books insert(Books book) {
+        book.setBookId(null);
+        book.setCategory(null);
+        return bookRepository.save(book);
     }
 
 }
