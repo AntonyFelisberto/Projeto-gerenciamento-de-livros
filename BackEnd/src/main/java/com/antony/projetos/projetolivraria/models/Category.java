@@ -4,8 +4,10 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +26,11 @@ public class Category implements Serializable {
     @Id
     @GeneratedValue(strategy = IDENTITY)
     private Integer categoryId;
+    @NotEmpty(message = "Campo nome é requerido")
+    @Length(min = 3, max = 100, message = "Campo nome precisa de pelo menos 3 caracteres e no maximo 100")
     private String name;
+    @NotEmpty(message = "Campo description é requerido")
+    @Length(min = 3, max = 200, message = "Campo description precisa de pelo menos 3 caracteres e no maximo 200")
     private String description;
 
     @OneToMany(cascade=CascadeType.ALL)

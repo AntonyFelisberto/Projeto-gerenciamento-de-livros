@@ -8,10 +8,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@CrossOrigin("*")
 @AllArgsConstructor
 @RestController
 @RequestMapping("/categories")
@@ -35,7 +37,7 @@ public class CategoriesController {
     }
 
     @PostMapping
-    public ResponseEntity<Category> addCategory(@RequestBody Category category) {
+    public ResponseEntity<Category> addCategory(@Valid @RequestBody Category category) {
         category = categoryService.save(category);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequestUri()
                                             .path("/{id}")
@@ -46,7 +48,7 @@ public class CategoriesController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<CategoryDTO> updateCategory(@PathVariable Integer id, @RequestBody CategoryDTO categoryDto) {
+    public ResponseEntity<CategoryDTO> updateCategory(@PathVariable Integer id,@Valid @RequestBody CategoryDTO categoryDto) {
         Category category = categoryService.update(id, categoryDto);
         return ResponseEntity.ok().body(new CategoryDTO(category));
     }

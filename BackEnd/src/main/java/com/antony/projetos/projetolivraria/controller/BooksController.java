@@ -8,10 +8,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@CrossOrigin("*")
 @AllArgsConstructor
 @RestController
 @RequestMapping("/book")
@@ -33,20 +35,20 @@ public class BooksController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Books> update(@PathVariable Integer id,@RequestBody Books books){
+    public ResponseEntity<Books> update(@PathVariable Integer id,@Valid @RequestBody Books books){
         Books book = bookService.update(id,books);
         return ResponseEntity.ok().body(book);
     }
 
     @PatchMapping ("/{idBook}")
-    public ResponseEntity<Books> updatePatch(@PathVariable Integer idBook,@RequestBody Books books){
+    public ResponseEntity<Books> updatePatch(@PathVariable Integer idBook,@Valid @RequestBody Books books){
         Books book = bookService.update(idBook,books);
         return ResponseEntity.ok().body(book);
     }
 
     @PostMapping    //Http:localhost:8080/book?category=id  -------- FORMATO URL SEM INSERÇÃO PADRÃO E REQUEST PARAM--------
     public ResponseEntity<Books> insert(@RequestParam(value = "category",defaultValue = "0")Integer idCategory,
-                                        @RequestBody Books book){
+                                        @Valid @RequestBody Books book){
         Books books = bookService.insert(idCategory,book);
         URI uri = ServletUriComponentsBuilder.fromCurrentContextPath().path("/book/{id}").buildAndExpand(books.getBookId()).toUri();
         return ResponseEntity.created(uri).build();

@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import javax.validation.Valid;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -15,6 +16,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@CrossOrigin("*")
 @AllArgsConstructor
 @RestController
 @RequestMapping("/book")
@@ -36,13 +38,13 @@ public class BooksControllerWithMapping {
     }
 
     @PutMapping("/atualizar/{id}")
-    public ResponseEntity<Books> update(@PathVariable Integer id,@RequestBody Books books){
+    public ResponseEntity<Books> update(@PathVariable Integer id,@Valid @RequestBody Books books){
         Books book = bookService.update(id,books);
         return ResponseEntity.ok().body(book);
     }
 
     @PatchMapping ("/atualizarPatch/{id}")
-    public ResponseEntity<Books> updatePatch(@PathVariable Integer id,@RequestBody Books books){
+    public ResponseEntity<Books> updatePatch(@PathVariable Integer id,@Valid @RequestBody Books books){
         Books book = bookService.update(id,books);
         return ResponseEntity.ok().body(book);
     }
@@ -54,7 +56,7 @@ public class BooksControllerWithMapping {
     }
 
     @PostMapping("/adicionarSemCategoria")
-    public ResponseEntity<Books> insertWithoutId(@RequestBody Books book) throws MalformedURLException, URISyntaxException {
+    public ResponseEntity<Books> insertWithoutId(@Valid @RequestBody Books book) throws MalformedURLException, URISyntaxException {
         Books books = bookService.insert(book);
         URI uri = ServletUriComponentsBuilder.fromCurrentContextPath()
                 .path("/book/{bookId}")
@@ -77,7 +79,7 @@ public class BooksControllerWithMapping {
 
     @PostMapping("/adicionar/{idCategory}")
     public ResponseEntity<Books> insert(@PathVariable Integer idCategory,
-                                        @RequestBody Books book) throws MalformedURLException, URISyntaxException {
+                                        @Valid @RequestBody Books book) throws MalformedURLException, URISyntaxException {
         Books books = bookService.insert(idCategory,book);
         URI uri = ServletUriComponentsBuilder.fromCurrentContextPath()
                 .path("/book/{bookId}")

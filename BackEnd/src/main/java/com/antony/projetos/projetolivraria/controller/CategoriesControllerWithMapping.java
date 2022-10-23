@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import javax.validation.Valid;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -15,6 +16,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@CrossOrigin("*")
 @AllArgsConstructor
 @RestController
 @RequestMapping("/categories")
@@ -38,7 +40,7 @@ public class CategoriesControllerWithMapping {
     }
 
     @PostMapping("/adicionar")
-    public ResponseEntity<Category> addCategory(@RequestBody Category category) throws MalformedURLException, URISyntaxException {
+    public ResponseEntity<Category> addCategory(@Valid @RequestBody Category category) throws MalformedURLException, URISyntaxException {
         category = categoryService.save(category);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequestUri()
                                             .path("/buscar/{id}")
@@ -60,7 +62,7 @@ public class CategoriesControllerWithMapping {
     }
 
     @PutMapping("/update/{id}")
-    public ResponseEntity<CategoryDTO> update(@PathVariable Integer id, @RequestBody CategoryDTO categoryDto) {
+    public ResponseEntity<CategoryDTO> update(@PathVariable Integer id,@Valid @RequestBody CategoryDTO categoryDto) {
         Category category = categoryService.update(id, categoryDto);
         return ResponseEntity.ok().body(new CategoryDTO(category));
     }
